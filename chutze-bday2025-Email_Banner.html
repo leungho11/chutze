@@ -1,0 +1,110 @@
+<!--
+Peter Rabbit Birthday Email Template
+Subject line options:
+ - Hoppy Birthday to You! 🐇
+ - Somebunny Special is Having a Birthday!
+ - Peter Rabbit Has a Birthday Surprise for You!
+
+How to use:
+ - Replace image URLs (placeholder images used) with your own hosted images.
+ - Replace [FRIEND_NAME] and [SENDER_NAME] with personalization tokens your email platform supports (e.g., *|FNAME|* for Mailchimp).
+ - Test in Litmus/Email on Acid or send test messages to Gmail/Outlook to check rendering.
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hoppy Birthday!</title>
+  <style>
+    /* Client-friendly reset */
+    body { Margin:0; padding:0; background-color:#FFFDF8; }
+    table { border-collapse:collapse; }
+    img { border:0; display:block; line-height:100%; outline:none; text-decoration:none; }
+    a { color:inherit; text-decoration:none; }
+
+    /* Container */
+    .email-wrapper { width:100%; background-color:#FFFDF8; padding:20px 0; }
+    .email-content { width:600px; margin:0 auto; background:#ffffff; border-radius:12px; overflow:hidden; box-shadow:0 6px 18px rgba(20,20,20,0.06); }
+
+    /* Header */
+    .hero { width:100%; }
+
+    /* Body */
+    .body { padding:28px 36px; font-family: 'Helvetica Neue', Arial, sans-serif; color:#2b2b2b; }
+    .title { font-size:26px; font-weight:700; margin:6px 0 12px; color:#2b6b2b; }
+    .lead { font-size:16px; line-height:1.5; margin-bottom:18px; color:#444444; }
+
+    /* Button */
+    .btn { display:inline-block; padding:12px 20px; border-radius:999px; background:linear-gradient(90deg,#86c26a,#4aa64a); color:#fff; font-weight:700; }
+
+    /* Footer */
+    .footer { padding:18px 36px; font-size:12px; color:#7a7a7a; text-align:center; }
+
+    /* Small screens */
+    @media screen and (max-width:620px) {
+      .email-content { width:94% !important; }
+      .body { padding:20px !important; }
+      .title { font-size:22px !important; }
+      .lead { font-size:15px !important; }
+    }
+  </style>
+</head>
+<body>
+  <center class="email-wrapper">
+    <table role="presentation" class="email-content" width="600" cellpadding="0" cellspacing="0" aria-hidden="true">
+      <tr>
+        <td>
+          <!-- Hero image (replace URL) -->
+          <img class="hero" src="/chutze-bday2025-Email_Banner.jpg" alt="Peter Rabbit header illustration - replace with your image" width="600" style="max-width:100%; height:auto; display:block;" />
+        </td>
+      </tr>
+      <tr>
+        <td class="body">
+          <!-- Title -->
+          <div class="title">🎉 Happy Birthday, Chu Tze! 🎉</div>
+
+          <!-- Greeting -->
+          <div class="lead">The garden is buzzing and somebunny special is celebrating today! <b>Bobos</b> and <b>Peter Rabbit</b> hopped over with a pocket full of carrots and a heart full of wishes just for you.</div>
+
+          <!-- Message -->
+          <p style="margin:0 0 18px; font-size:15px; color:#444; line-height:1.5;">Wishing you a day full of playful adventures, sweet treats, and the kind of cozy joy that fits perfectly in a teacup. May your year be as curious and bright as a morning in Mr. McGregor's garden.</p>
+
+          <!-- CTA -->
+          <p style="margin:0 0 22px;">
+            <a href="#" class="btn" target="_blank">Open Your Birthday Surprise!</a>
+          </p>
+
+          <!-- Two-column area (image + short note) -->
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="160" valign="top" style="padding-right:14px;">
+                <img src="https://via.placeholder.com/160.png?text=Cake" alt="Birthday cake illustration" width="160" style="border-radius:10px; max-width:100%; height:auto;" />
+              </td>
+              <td valign="top" style="vertical-align:top; font-size:14px; color:#555;">
+                <strong>Little note:</strong>
+                <p style="margin:6px 0 0;">Don't forget — carrots for breakfast make great party hats. Promise?</p>
+              </td>
+            </tr>
+          </table>
+
+        </td>
+      </tr>
+
+      <!-- Decorative band -->
+      <tr>
+        <td style="background:#fbf9f3; padding:10px 36px; text-align:center; font-size:13px; color:#7a7a7a;">Peeking out from the burrow: a lot of love and a little mischief.</td>
+      </tr>
+
+      <!-- Footer area -->
+      <tr>
+        <td class="footer">
+          <p style="margin:6px 0 8px;">With love (and maybe a carrot or two),<br>[SENDER_NAME] 🐰</p>
+          <p style="margin:0; font-size:12px; color:#9b9b9b;">If you'd like to stop receiving adorable rabbit mailings, you can <a href="#" style="color:#9b9b9b;">unsubscribe</a>.</p>
+        </td>
+      </tr>
+    </table>
+  </center>
+</body>
+</html>
