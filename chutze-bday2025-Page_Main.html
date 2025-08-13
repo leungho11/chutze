@@ -80,8 +80,8 @@
 
 		  // Generate QR code using Google Charts API
 		  const qrData = encodeURIComponent("https://www.hop-skip-jump.com/gift?code=" + userCode);
-		  const qrImage1 = `<img src="https://leungho11.github.io/chutze/chutze-bday2025-Page_Voucher_Travel.jpg" alt="Travel Voucher" style="max-width:360px; height:auto; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.1);" />`;
-		  const qrImage2 = `<img src="https://leungho11.github.io/chutze/chutze-bday2025-Page_Voucher_Satay.jpg" alt="Bobo style satay beef noodle set" style="max-width:360px; height:auto; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.1);" />`;
+		  const qrImage1 = `<a href="https://leungho11.github.io/chutze/chutze-bday2025-Page_Redem_Success_Travel.html" target="_blank"> <img src="https://leungho11.github.io/chutze/chutze-bday2025-Page_Voucher_Travel.jpg" alt="Travel Voucher" style="max-width:360px; height:auto; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.1);" />`;
+		  const qrImage2 = `<a href="https://leungho11.github.io/chutze/chutze-bday2025-Page_Redem_Success_Satay.html" target="_blank"> <img src="https://leungho11.github.io/chutze/chutze-bday2025-Page_Voucher_Satay.jpg" alt="Bobo style satay beef noodle set" style="max-width:360px; height:auto; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.1);" />`;
 		  qrContainer.innerHTML = qrImage2;		  
 		  
 		  qrContainer.innerHTML = qrImage1 + "<br><br><br><br>" + qrImage2;
