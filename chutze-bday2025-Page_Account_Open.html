@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Account Registration</title>
+  <style>
+    body { margin:0; padding:0; background-color:#F7F3EC; font-family: 'Georgia', serif; color:#4b4b4b; }
+    .container { max-width:600px; margin:auto; background:#fff; padding:20px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.05); }
+    .header { text-align:center; }
+    .header img { width:100%; height:auto; border-top-left-radius:8px; border-top-right-radius:8px; }
+    .title { font-size:28px; color:#3a5a44; margin-top:16px; }
+    .section { margin:20px 0; }
+    .section h2 { font-size:20px; color:#5a6d58; margin-bottom:8px; }
+    .btn { display:inline-block; background:#6c9b71; color:#fff; padding:12px 24px; border-radius:4px; text-decoration:none; font-weight:bold; cursor:pointer; border:none; }
+    .footer { font-size:14px; text-align:center; color:#7a7a7a; padding-top:20px; border-top:1px solid #e0dcd3; }
+    input[type="text"] { padding:10px; border:1px solid #ccc; border-radius:4px; font-size:16px; width:calc(100% - 24px); margin-bottom:10px; }
+    .message { margin-top:10px; font-size:14px; }
+    .success { color:green; }
+    .error { color:red; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+	  <img src="https://leungho11.github.io/chutze/chutze-bday2025-Page_Redem_Success_Header.jpg" alt="chu tze's Birthday 2025" />
+    </div>
+	
+	<!--
+
+     <div class="section">
+      <h2>Account Registration</h2>
+	  <p>One step to redeem your birthday surprise!</p>
+      <input type="text" id="name" placeholder="Enter your code here" />	  
+      <button class="btn" onclick="Submit()">Submit</button>
+      <div class="message" id="message"></div>
+    </div>
+
+	<div id="qrContainer" style="margin-top:20px; text-align:center;"></div>
+	
+	-->
+	
+
+  <div class="container">
+    <div class="header">
+      <!-- Optional image banner -->
+      <!-- <img src="your-banner.jpg" alt="Celebration Banner" /> -->
+	  <div class="title">🐰🐵🐱🐸<br/>Account Registration</div>
+    </div>
+
+    <form id="giftForm" onsubmit="return validateForm()">
+      <div class="section">
+        <h2>Name</h2>
+        <input type="text" id="name" placeholder="Enter your name" />
+      </div>
+
+      <div class="section">
+        <h2>Birthday (MM-DD)</h2>
+        <input type="text" id="birthday" value="08-20" placeholder="e.g. 08-13" />
+      </div>
+
+      <button type="submit" class="btn">Submit</button>
+      <div class="message" id="formMessage"></div>
+    </form>
+
+    <div class="footer">We celebrate you 🎂</div>
+  </div>
+
+    <div class="section">
+      <h2>What's Included</h2>
+      <ul>
+        <li>1 x complimentary Bobo coin</li>
+		<li>One-time 80% discount after your first purchase on BoBo coins (birthday offer can be used at the same time)</li>
+      </ul>
+    </div>
+
+    <div class="footer">
+      We can’t wait to share a little bobo magic with you!<br/>
+      <small>Powered by The World of Bobo.</small>
+    </div>
+  </div>
+
+  <script>
+    function validateForm() {
+      const nameInput = document.getElementById("name").value.trim().toLowerCase();
+      const birthdayInput = document.getElementById("birthday").value.trim();
+      const message = document.getElementById("formMessage");
+
+      const validNames = ["xina", "bobo", "christina", "christina chan"];
+      const birthdayPattern = /^(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$/;
+
+      if (!validNames.includes(nameInput)) {
+        message.textContent = "❌ You should input your name!";
+        message.className = "message error";
+        return false;
+      }
+
+      if (!birthdayPattern.test(birthdayInput)) {
+        message.textContent = "❌ Birthday must be in MM-DD format (e.g. 08-13).";
+        message.className = "message error";
+        return false;
+      }
+
+      message.textContent = "✅ Form submitted successfully!";
+      message.className = "message success";
+	  alert("🎉 Submission successful! Redirecting...");
+      setTimeout(function() {
+        window.location.href = "https://leungho11.github.io/chutze/chutze-bday2025-Email_Banner.html";
+      }, 2000);	  
+	  
+      return false; // Prevent actual submission for demo
+    }
+  </script>
+  
+</body>
+</html>
+
