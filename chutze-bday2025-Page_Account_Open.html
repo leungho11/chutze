@@ -15,7 +15,7 @@
     .btn { display:inline-block; background:#6c9b71; color:#fff; padding:12px 24px; border-radius:4px; text-decoration:none; font-weight:bold; cursor:pointer; border:none; }
     .footer { font-size:14px; text-align:center; color:#7a7a7a; padding-top:20px; border-top:1px solid #e0dcd3; }
     input[type="text"] { padding:10px; border:1px solid #ccc; border-radius:4px; font-size:16px; width:calc(100% - 24px); margin-bottom:10px; }
-    .message { margin-top:10px; font-size:14px; }
+    .message { margin-top:10px; font-size:18px; }
     .success { color:green; }
     .error { color:red; }
   </style>
@@ -25,20 +25,6 @@
     <div class="header">
 	  <img src="https://leungho11.github.io/chutze/chutze-bday2025-Page_Redem_Success_Header.jpg" alt="chu tze's Birthday 2025" />
     </div>
-	
-	<!--
-
-     <div class="section">
-      <h2>Account Registration</h2>
-	  <p>One step to redeem your birthday surprise!</p>
-      <input type="text" id="name" placeholder="Enter your code here" />	  
-      <button class="btn" onclick="Submit()">Submit</button>
-      <div class="message" id="message"></div>
-    </div>
-
-	<div id="qrContainer" style="margin-top:20px; text-align:center;"></div>
-	
-	-->
 	
 
   <div class="container">
@@ -103,9 +89,11 @@
 
       message.textContent = "✅ Form submitted successfully!";
       message.className = "message success";
+	  
       setTimeout(function() {
-        window.location.href = "https://leungho11.github.io/chutze/chutze-bday2025-Email_Banner.html";
-      }, 1000);	  
+		alert("🎉 The first 3 digits of your account code is 820");
+        window.location.href = "https://leungho11.github.io/chutze/chutze-bday2025-Page_Main.html";
+      }, 3000);	  
 	  
       return false; // Prevent actual submission for demo
     }
@@ -113,5 +101,3 @@
   
 </body>
 </html>
-
-
