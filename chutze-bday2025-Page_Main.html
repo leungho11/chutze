@@ -33,7 +33,7 @@
       <button class="btn" onclick="checkCode()">Redeem</button> <a href="https://leungho11.github.io/chutze/chutze-bday2025-Page_Account_Open.html" target="_blank" style="color: grey; font-size: 12px;">Don't have an account yet?</a>
       <div class="message" id="message"></div>
 	  
-	  <input type="hidden" id="controlCode" value="2" />
+	  <input type="hidden" id="controlCode" value="3" />
     </div>
 	
 	<div id="qrContainer" style="margin-top:20px; text-align:center;"></div>
@@ -91,33 +91,47 @@
 
       // 🍜 Image 2
       const qrImage2 = (controlCode >= 2)
+        ? `<a href="https://leungho11.github.io/chutze/chutze-bday2025-Page_Redem_Success_Lobster.html" target="_blank">
+             <img src="https://leungho11.github.io/chutze/chutze-bday2025-Page_Voucher_Lobster.jpg" 
+                  alt="Bobo-style Lobster Soup Rice" 
+                  style="max-width:360px; height:auto; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.1);" />
+           </a>`
+        : `<div title="This voucher is not available yet" style="display:inline-block; cursor: not-allowed;">
+             <img src="https://leungho11.github.io/chutze/chutze-bday2025-Page_Voucher_Lobster.jpg" 
+                  alt="Bobo-style Lobster Soup Rice (disabled)" 
+                  style="max-width:360px; height:auto; border-radius:12px; 
+                         box-shadow:0 2px 8px rgba(0,0,0,0.1); filter: grayscale(100%); opacity: 0.6;" />
+           </div>`;	  
+
+      // 🍰 Image 3
+      const qrImage3 = (controlCode >= 3)
         ? `<a href="https://leungho11.github.io/chutze/chutze-bday2025-Page_Redem_Success_Satay.html" target="_blank">
              <img src="https://leungho11.github.io/chutze/chutze-bday2025-Page_Voucher_Satay.jpg" 
-                  alt="Satay Beef Noodle Set" 
+                  alt="Bobo-style Satay Beef Noodle Set" 
                   style="max-width:360px; height:auto; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.1);" />
            </a>`
         : `<div title="This voucher is not available yet" style="display:inline-block; cursor: not-allowed;">
              <img src="https://leungho11.github.io/chutze/chutze-bday2025-Page_Voucher_Satay.jpg" 
-                  alt="Satay Beef Noodle Set (disabled)" 
+                  alt="Bobo-style Satay Beef Noodle Set (disabled)" 
                   style="max-width:360px; height:auto; border-radius:12px; 
                          box-shadow:0 2px 8px rgba(0,0,0,0.1); filter: grayscale(100%); opacity: 0.6;" />
            </div>`;
-
-      // 🍰 Image 3
-      const qrImage3 = (controlCode === 3)
-        ? `<a href="https://leungho11.github.io/chutze/chutze-bday2025-Page_Redem_Success_Cake.html" target="_blank">
-             <img src="https://leungho11.github.io/chutze/chutze-bday2025-Page_Redem_Success_Styling_Icon.jpg" 
+		   
+     // 🍰 Image 3
+      const qrImage4 = (controlCode === 4)
+        ? `<a href="#" target="_blank">
+             <img src="https://leungho11.github.io/chutze/chutze-bday2025-Page_Voucher_Styler.jpg" 
                   alt="Birthday Cake Set" 
                   style="max-width:360px; height:auto; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.1);" />
            </a>`
         : `<div title="This voucher is not available yet" style="display:inline-block; cursor: not-allowed;">
-             <img src="https://leungho11.github.io/chutze/chutze-bday2025-Page_Redem_Success_Styling_Icon.jpg" 
+             <img src="https://leungho11.github.io/chutze/chutze-bday2025-Page_Voucher_Styler.jpg" 
                   alt="Birthday Cake Set (disabled)" 
                   style="max-width:360px; height:auto; border-radius:12px; 
                          box-shadow:0 2px 8px rgba(0,0,0,0.1); filter: grayscale(100%); opacity: 0.6;" />
-           </div>`;
+           </div>`;		   
 
-      qrContainer.innerHTML = qrImage1 + "<br><br><br><br>" + qrImage2 + "<br><br><br><br>" + qrImage3;
+      qrContainer.innerHTML = qrImage1 + "<br><br><br><br>" + qrImage2 + "<br><br><br><br>" + qrImage3 + "<br><br><br><br>" + qrImage4;
 
     } else {
       message.textContent = "❌ Invalid code. Please try again.";
@@ -130,5 +144,4 @@
   
 </body>
 </html>
-
 
